@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  block-size: 100vh;
+}
+
+.container {
+  position: relative;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: none;
+  object-fit: contain;
+  object-position: center;
+  animation: up 5s linear;
+}
+
+@keyframes up {
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(330deg);
+  }
+
+  to {
+    transform: translate(-50%, -2000%);
+    opacity: 0;
+    filter: hue-rotate(30deg);
+  }
+}
